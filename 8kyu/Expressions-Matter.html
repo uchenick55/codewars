@@ -1,0 +1,18 @@
+<script>
+    function expressionMatter(a, b, c) {
+        const resArr = []
+        resArr.push(
+            a*b*c,
+            a+b+c,
+            a+b*c,
+            a*b+c,
+            (a+b)*c,
+            a*(b+c),
+        )
+       const result = Math.max.apply(null, resArr)
+        console.log(resArr)
+        console.log(result)
+        return result
+    }
+    expressionMatter(1,2,3) //  ==>  return 9
+</script>
