@@ -1,0 +1,30 @@
+<!--https://www.codewars.com/kata/5d10d53a4b67bb00211ca8af/train/javascript-->
+<!--"xxYxx" and w = 3      &ndash;&gt;  2 waterbombs needed-->
+<!--"xxYxx" and w = 1      &ndash;&gt;  4-->
+<!--"xxxxYxYx" and w = 5   &ndash;&gt;  3-->
+<!--"xxxxxYxYx" and w = 2  &ndash;&gt;  5-->
+<script>
+    function waterbombs(fire, w) {
+        //#your code is here
+        const fireArr = fire.split("")
+        console.log(fireArr)
+        let bombsCount = 0;
+        for (let i = 0; i < fireArr.length - 1; i++) { // пробегаем весь массив
+            for (let j = 0; j < w; j++) { // пробегаем по ширине водной полосы
+                if (fireArr[j] === 'x') { // если текущий элемент под водной полосой х (пожар)
+                    console.log("pass element, fireArr[j];", fireArr[j], i)
+                    i++
+                }
+                if (fireArr[j] === 'Y') { // если текущий элемент под водной полосой х (пожар)
+                    console.log("pass element, fireArr[j];", fireArr[j], i)
+                    break
+                }
+
+            }
+            bombsCount++ // после прохода J мы увеличиваем количество бомб
+        }
+        console.log(bombsCount)
+    }
+
+    waterbombs("xxxxYxx", 3)
+</script>
