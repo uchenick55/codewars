@@ -1,0 +1,20 @@
+<script>
+    function isLeapYear(year) {
+        // TODO
+        if (year % 4 !== 0 ) {
+            console.log("year is not LeapYear(year % 4 !== 0 )")
+            return false
+        }
+        if (year % 100 !== 0 ) {
+            console.log("year is LeapYear (year % 100 !== 0 )")
+            return true
+        }
+        if (year % 400 !== 0 ) {
+            console.log("year is NOT LeapYear (year % 400 !== 0)")
+            return false
+        }
+        console.log("year is LeapYear (year % 400 === 0)")
+        return true
+    }
+    isLeapYear(2020)
+</script>
