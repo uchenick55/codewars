@@ -1,0 +1,32 @@
+<!--
+https://www.codewars.com/kata/59b0a6da44a4b7080300008a/train/javascript
+convert time am/pm to 24 format
+-->
+
+<script>
+    function to24hourtime(hour, minute, period) {
+        // hour will always range from 1 to 12 (inclusive)
+        // minute will always range from 0 to 59 (inclusive)
+        // period will always be either "am" or "pm"
+
+        if (hour===12 && period==="am") {
+            console.log("hour===12 && period===am => 0000")
+            return `00${("0" + minute.toString()).substr(-2)}`
+
+        }
+        if (hour===12 && period==="pm") {
+            console.log("hour===12 && period===pm => 1200")
+            return `12${("0" + minute.toString()).substr(-2)}`
+        }
+        if (period === "pm") {
+            hour = hour + 12
+            console.log(hour)
+        }
+        const result = (("0" + hour.toString()).substr(-2))+
+            (("0" + minute.toString()).substr(-2))
+        console.log( result )
+        return result
+    }
+
+    to24hourtime(1,  0, "am") //"1300"
+</script>
