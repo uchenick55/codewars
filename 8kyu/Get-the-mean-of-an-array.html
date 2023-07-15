@@ -1,0 +1,24 @@
+<!--https://www.codewars.com/kata/563e320cee5dddcf77000158/train/javascript-->
+<!--среднее значение массива-->
+
+<script>
+    function getAverage(marks){
+        //TODO : calculate the downward rounded average of the marks array
+
+        const avg = Math.floor(
+            marks.reduce((
+                p, // аккумулятор
+                c, // очередной элемент массива
+                _, // здесь индекс массива итерации
+                a // сам массив
+                ) =>
+                p //аккумулятор
+                + c/a.length, // добавить элемент массива, поделенный на длину массива
+                0 // начальное значение ноль
+            )
+        )
+        console.log(avg)
+        return avg
+    }
+    getAverage([1,1,1,1,1,1,1,2])
+</script>
