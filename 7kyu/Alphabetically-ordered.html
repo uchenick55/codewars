@@ -1,0 +1,22 @@
+<!--
+https://www.codewars.com/kata/5a8059b1fd577709860000f6/train/javascript
+
+"kata" -> false ('a' comes after 'k')
+"ant" -> true (all characters are in alphabetical order)
+-->
+
+<script>
+    function alphabetic(s) {
+        const arr = s.split("")
+        for (let i = 0; i<arr.length-1; i++) {
+            const partA = arr[i].toLowerCase(); // ignore upper and lowercase
+            const partB = arr[i+1].toLowerCase(); // ignore upper and lowercase
+            if (partB<partA) {
+                return false // буквы НЕ в алфавитном порядке
+            }
+        }
+        return true // буквы в алфавитном порядке
+    }
+
+    console.log(alphabetic(""))
+</script>
