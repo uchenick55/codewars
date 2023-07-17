@@ -1,0 +1,44 @@
+<!--
+codewars.com/kata/58941fec8afa3618c9000184
+
+For upSpeed = 100, downSpeed = 10 and desiredHeight = 910, the output should be 10.
+
+After day 1 &ndash;&gt; 100
+After night 1 &ndash;&gt; 90
+After day 2 &ndash;&gt; 190
+After night 2 &ndash;&gt; 180
+After day 3 &ndash;&gt; 280
+After night 3 &ndash;&gt; 270
+After day 4 &ndash;&gt; 370
+After night 4 &ndash;&gt; 360
+After day 5 &ndash;&gt; 460
+After night 5 &ndash;&gt; 450
+After day 6 &ndash;&gt; 550
+After night 6 &ndash;&gt; 540
+After day 7 &ndash;&gt; 640
+After night 7 &ndash;&gt; 630
+After day 8 &ndash;&gt; 730
+After night 8 &ndash;&gt; 720
+After day 9 &ndash;&gt; 820
+After night 9 &ndash;&gt; 810
+After day 10 &ndash;&gt; 910
+-->
+
+<script>
+    function growingPlant(upSpeed, downSpeed, desiredHeight) {
+        //coding and coding..
+        let resulHeight = 0
+        let day = 0
+        while (resulHeight<desiredHeight && day< 1000) {
+            resulHeight = resulHeight + upSpeed
+            day++
+            if (resulHeight>=desiredHeight) {
+                break
+            }
+            resulHeight = resulHeight - downSpeed
+        }
+        console.log(day, resulHeight)
+        return day
+    }
+    growingPlant(10,9,4) //10
+</script>
