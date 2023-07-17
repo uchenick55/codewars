@@ -1,0 +1,18 @@
+<!--https://www.codewars.com/kata/57f6ad55cca6e045d2000627/train/javascript-->
+
+<script>
+    function squareOrSquareRoot(array) {
+        console.log(array)
+        const result = []
+        for (let i=0; i<array.length; i++) {
+            const sqrtItem = Math.sqrt(array[i])
+            if (sqrtItem%1!==0) {
+                result.push (array[i]*array[i])
+            }
+            result.push (sqrtItem)
+        }
+        console.log(result)
+        return result;
+    }
+    squareOrSquareRoot([ 4, 3, 9, 7, 2, 1 ]) //expected = [ 2, 9, 3, 49, 4, 1 ]
+</script>
